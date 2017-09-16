@@ -8,4 +8,4 @@ ENV HOME=/home/app
 
 USER app
 WORKDIR $HOME/chat
-ENTRYPOINT ['app.js']
+ENTRYPOINT ['app']
