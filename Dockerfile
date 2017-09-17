@@ -1,4 +1,4 @@
-FROM node:8.5
+FROM node:4.7.2
 MAINTAINER hori75 <guardianangelhori75@gmail.com>
 
 RUN mkdir -p /usr/src/app
