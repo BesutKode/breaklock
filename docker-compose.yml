@@ -1,5 +1,17 @@
-chat:
+version: '3'
+
+app:
   build: .
-  command: echo 'ready'
   volumes:
-    - .:/home/app/chat
+    - .:./usr/src/app
+  ports:
+    - 3000:80
+  
+website:
+ image: php:apache
+ volumes:
+    - ./website:/var/www/html
+ ports:
+    - 3000:80
+ depends_on:
+   - app
