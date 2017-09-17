@@ -1,11 +1,15 @@
-FROM node:4.3.2
+FROM node:8.5
 MAINTAINER hori75 <guardianangelhori75@gmail.com>
 
-RUN useradd --user-group --create-home --shell /bin/false app &&\
-  npm install --global npm@3.7.5
+RUN mkdir -p /usr/src/app
+WORKDIR /urs/src/app
 
-ENV HOME=/home/app
+COPY package.json /usr/src/app/
+RUN cd /usr/src/app/
+RUN npm install
+RUN node --version
 
-USER app
-WORKDIR $HOME/chat
-ENTRYPOINT ['app']
+COPY . /usr/src/app
+
+EXPOSE 3000
+CMD ["npm","start"]
