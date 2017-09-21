@@ -3,7 +3,14 @@ version: '2'
 services:
  app:
    build: .
-   volumes:
-     - .:./usr/src/app
+ nginx:
+   build: ./nginx
    ports:
-     - 3000:80
+    - 80:80
+    - 445:445
+   volumes:
+      - ./static:/usr/src/app/static
+      - /path/to/ssl.crt:/etc/ssl/ssl.crt
+      - /path/to/ssl.key:/etc/ssl/ssl.key
+    links:
+      - app
