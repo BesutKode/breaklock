@@ -10,7 +10,5 @@ services:
     - 445:445
    volumes:
       - ./static:/usr/src/app/static
-      - /path/to/ssl.crt:/etc/ssl/ssl.crt
-      - /path/to/ssl.key:/etc/ssl/ssl.key
     links:
       - app
