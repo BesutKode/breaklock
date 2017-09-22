@@ -1,7 +1,6 @@
 FROM ubuntu:latest
 
-WORKDIR /app
-COPY . /app
+WORKDIR /usr/src/app/
 
 RUN apt-get update
 RUN apt-get install curl -y
