@@ -6,13 +6,12 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app/
 COPY package.json package-lock.json ./
 RUN npm install
-RUN npm run build
 
 COPY . /usr/src/app
 
 ENV NODE_ENV=production
 ENV PORT=3000
 
-CMD ["/usr/src/app/", "./index.html"]
+CMD ["npm","run","build"]
 EXPOSE 3000
 
