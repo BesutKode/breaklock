@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 
 services:
  app:
@@ -8,7 +8,7 @@ services:
  webpack:
     build: ./webpack
     ports:
-      - "35729:35729" // for live reload
+      - "35729:35729"
     volumes:
       - .:/app
       - /app/node_modules
@@ -22,3 +22,4 @@ services:
       - wwwroot:/wwwroot
 volumes:
   wwwroot:
+   driver: local
