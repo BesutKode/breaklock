@@ -7,8 +7,7 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app/
 COPY package.json package-lock.json ./
 RUN npm install
-
-RUN webpack
+RUN npm run build
 
 COPY . /usr/src/app
 
