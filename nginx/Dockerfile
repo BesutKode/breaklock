@@ -1,5 +1,6 @@
-FROM nginx:1.13-alpine
+FROM nginx
 MAINTAINER William <guardianangelhori75@gmail.com>
 
+EXPOSE 80
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-RUN service nginx start
+
