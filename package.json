@@ -4,7 +4,7 @@
   "description": "Small PWA game to guess pattern locks",
   "main": "scripts/app.js",
   "scripts": {
-    "build": "./node_modules/webpack/bin/webpack.js --optimize-minimize"
+    "build": "./node_modules/webpack/bin/webpack.js --config ./webpack.config.js"
   },
   "repository": {
     "type": "git",
