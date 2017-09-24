@@ -4,7 +4,6 @@ MAINTAINER William <guardianangelhori75@gmail.com>
 RUN mkdir -p /usr/src/app
 
 WORKDIR /usr/src/app/
-COPY package.json package-lock.json ./
 COPY . /usr/src/app
 RUN npm install http-server -g
 RUN npm install
