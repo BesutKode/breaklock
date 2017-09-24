@@ -6,12 +6,12 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app/
 COPY package.json package-lock.json ./
 COPY . /usr/src/app
-RUN npm install
 RUN npm install http-server -g
+RUN npm install
 RUN npm run build
 
 ENV NODE_ENV=production
-ENV PORT=3000
+ENV PORT=8080
 
-EXPOSE 3000
-CMD ["http-server","./","-p","3000"]
+EXPOSE 8080
+CMD ["http-server",".","-p","8080"]
