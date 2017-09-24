@@ -4,7 +4,4 @@ services:
  app:
    build: .
    ports:
-    - 3000
-volumes:
-  wwwroot:
-   driver: local
+    - 8080
